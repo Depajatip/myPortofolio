@@ -146,8 +146,8 @@ import {
   docker,
   meta,
   starbucks,
-  tesla,
-  shopify,
+  smp,
+  pkl,
   carrent,
   jobit,
   tripguide,
@@ -259,8 +259,8 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    company_name: "smp",
+    icon: smp,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
@@ -272,8 +272,8 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "pkl",
+    icon: pkl,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [

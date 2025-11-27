@@ -4,6 +4,14 @@ import {
   creator,
   web,
   javascript,
+  bootstrap,
+  php,
+  laravel,
+  codeigniter,
+  python,
+  mysql,
+  postgresql,
+  wordpress,
   typescript,
   html,
   css,
@@ -15,14 +23,29 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  sd,
+  smp,
+  pkl,
+  smk,
+  tandatanya,
   carrent,
   jobit,
   tripguide,
   threejs,
+  penjualan1,
+  penjualan2,
+  penjualan3,
+  penjualan4,
+  penjualan5,
+  penjualan6,
+  penjualan7,
+  moneytracking1, 
+  moneytracking2,
+  moneytracking3,
+  moneytracking4,
+  moneytracking5,
+  moneytracking6,
+
 } from "../assets";
 
 export const navLinks = [
@@ -35,28 +58,29 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
 ];
 
+// Services / Skills (icons reuse existing assets where available)
 const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
+  { title: "CSS", icon: css, level: 92 },
+  { title: "JavaScript", icon: javascript, level: 90 },
+  { title: "Bootstrap", icon: bootstrap, level: 80 },
+  { title: "Tailwind", icon: tailwind, level: 78 },
+  { title: "PHP", icon: php, level: 84 },
+  { title: "Laravel", icon: laravel, level: 86 },
+  { title: "CodeIgniter", icon: codeigniter, level: 70 },
+  { title: "Python", icon: python, level: 72 },
+  { title: "MySQL", icon: mysql, level: 80 },
+  { title: "PostgreSQL", icon: postgresql, level: 76 },
+  { title: "Git", icon: git, level: 88 },
+  { title: "WordPress", icon: wordpress, level: 82 },
 ];
 
 const technologies = [
@@ -116,115 +140,135 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "SDN Mangunan",
+    company_name: "Mangunan, Dlingo, Bantul, Yogyakarta",
+    icon: sd,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "March 2014 - Jan 2020",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      // "Developing and maintaining web applications using React.js and other related technologies.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    title: "SMP Muhamadiyah Imogiri",
+    company_name: "Jl. Makam Raja No.18, Imogiri, Bantul, Yogyakarta",
+    icon: smp,
+    iconBg: "#E6DEDD",
+    date: "Jan 2020 - Feb 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      // "Developing and maintaining web applications using React.js and other related technologies.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "PKL CV. Karya Hidup Sentosa",
+    company_name: "Jl. Magelang No.144, Karangwaru, Kec. Tegalrejo, Yogyakarta,",
+    icon: pkl,
+    iconBg: "#E6DEDD",
+    date: "Jan 2025 - April 2025",
+    points: [
+      "Quality Enginnering intern working on testing and ensuring the quality of web applications.",
+    ],
+  },
+    {
+    title: "SMK Muhammadiyah 1 Bantul",
+    company_name: "Jl. Parangtritis Jl. Manding Kidul No.Km. 12, Trirenggo, Bantul, Yogyakarta",
+    icon: smk,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      // "Developing and maintaining web applications using React.js and other related technologies.",
     ],
   },
+      {
+    title: "???",
+    company_name: "i litraly have no cluee what im doing with ny life",
+    icon: tandatanya,
+    iconBg: "#E6DEDD",
+    date: "Jan 2026 - Future",
+    points: [
+      "i think onee of my biggest fears is never acchieving the life i so desperately crave for my future self",
+    ],
+  },
+  
 ];
 
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "The world is your oyster. It's up to you to find the pearls",
+    name: "Chris Gardner",
+    designation: "The Pursuit of Happyness",
+    company: "",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "You can't be good with somoeone else until you're good with yourself.",
+    name: "Alfredo Narciso",
+    designation: "The Summer I Turned Pretty",
+    company: "",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "At some point you gotta decide for yourself who you gonna be. Can't let nobody make that decision for you.",
+    name: "Juan",
+    designation: "Moonlight",
+    company: "",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Point Of Sales",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Point of Sale (POS) system using Laravel and Bootstrap 4, enabling real-time cashier workflows: category-based product browsing, dynamic cart management (add/remove/adjust items), instant stock updates in the UI, and visual stock validation (buttons auto-disable when out of stock). The system features role-based authorization — admins can manage products, categories, and user accounts (including creating cashier accounts), while cashiers are restricted to order processing and transactions — ensuring security, operational efficiency, and clear role separation.",
     tags: [
       {
-        name: "react",
+        name: "laravel",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "vite",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "mysql",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    images: [penjualan1,penjualan2,penjualan1,penjualan2,penjualan3,penjualan4,penjualan5,penjualan6,penjualan7],
+    source_code_link: "https://github.com/Depajatip/ukk5",
   },
   {
-    name: "Job IT",
+    name: "Money Tracking",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Money Tracking web application built using Laravel and Bootstrap — enabling users to record and monitor their financial activities in real time: category-based transaction logging, automatic sub-category selection, detailed payment method tracking, and filtered views for income and expenses. The system provides complete daily and historical summaries with date-based filtering, visual balance updates after each transaction, and clear separation between income and expense categories — ensuring accurate financial reporting, user convenience, and better personal budget control.",
     tags: [
       {
-        name: "react",
+        name: "laravel",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "pink-text-gradient",
+      },
+    ],
+    images: [moneytracking1,moneytracking2,moneytracking3,moneytracking4,moneytracking5,moneytracking6],
+    source_code_link: "https://github.com/Depajatip/MoneyTracking",
+  },
+  {
+    name: "ZyrexBot",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nodejs",
         color: "blue-text-gradient",
       },
       {
@@ -232,34 +276,14 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "php",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    images: [tripguide,jobit],
+    source_code_link: "https://github.com/Depajatip/ZyrexBot-App",
   },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };

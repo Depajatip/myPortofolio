@@ -1,5 +1,4 @@
 import React from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -7,33 +6,58 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+const ServiceCard = ({ index, title, icon, level = 80 }) => {
+  const hoverWidth = Math.min(level + 8, 100);
+  return (
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className='w-full'
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+      <motion.div
+        initial={{ y: 0 }}
+        whileHover={{ y: -8, scale: 1.03, rotate: 0.5 }}
+        whileTap={{ scale: 0.99 }}
+        transition={{ type: "spring", stiffness: 200, damping: 18 }}
+        className='group bg-[#0f1724] rounded-xl p-6 shadow-lg border border-white/5 hover:shadow-[0_12px_30px_rgba(99,102,241,0.12)]'
       >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
+        <div className='flex flex-col items-center'>
+          <motion.div
+            className='w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-500 flex items-center justify-center mb-4'
+            initial={{ rotate: 0, scale: 1 }}
+            whileHover={{ rotate: 12, scale: 1.12 }}
+            transition={{ type: "spring", stiffness: 300, damping: 18 }}
+          >
+            <motion.img
+              src={icon}
+              alt={title}
+              className='w-8 h-8 md:w-10 md:h-10 object-contain'
+              draggable={false}
+              whileHover={{ scale: 1.18, rotate: -8 }}
+              transition={{ duration: 0.25 }}
+            />
+          </motion.div>
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
-      </div>
+          <h3 className='text-white text-sm md:text-base font-semibold mb-3 text-center group-hover:text-indigo-300 transition-colors'>
+            {title}
+          </h3>
+
+          <div className='w-full'>
+            <div className='w-full h-2 rounded-full bg-white/8 overflow-hidden'>
+              <motion.div
+                className='h-2 rounded-full bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'
+                initial={{ width: 0 }}
+                animate={{ width: `${level}%` }}
+                whileHover={{ width: `${hoverWidth}%` }}
+                transition={{ duration: 0.9, ease: "easeOut" }}
+              />
+            </div>
+            <div className='mt-2 text-xs text-white/60 text-center group-hover:text-white'>{level}%</div>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
-  </Tilt>
-);
+  );
+};
 
 const About = () => {
   return (
@@ -54,10 +78,12 @@ const About = () => {
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+      <div className='mt-12'>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6'>
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+        </div>
       </div>
     </>
   );

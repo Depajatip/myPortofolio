@@ -30,19 +30,39 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    // Validate environment variables to avoid runtime error from EmailJS
+    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+    // Treat explicit placeholders as missing values too
+    const isPlaceholder = (v) => !v || v === "service_xxx" || v === "template_xxx";
+
+    if (isPlaceholder(serviceId) || isPlaceholder(templateId) || !publicKey) {
+      setLoading(false);
+      console.error("EmailJS missing config", { serviceId, templateId, publicKey });
+      alert(
+        "EmailJS configuration is missing or using placeholder values. Please set real VITE_APP_EMAILJS_SERVICE_ID and VITE_APP_EMAILJS_TEMPLATE_ID in your .env (replace 'service_xxx'/'template_xxx') and restart the dev server."
+      );
+      return;
+    }
+
+    const payload = {
+      from_name: form.name,
+      to_name: "JavaScript Mastery",
+      from_email: form.email,
+      to_email: "defajati22@gmail.com",
+      message: form.message,
+    };
+
+    // (debug logs removed)
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        serviceId,
+        templateId,
+        payload,
+        publicKey
       )
       .then(
         () => {

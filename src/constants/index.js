@@ -69,18 +69,18 @@ export const navLinks = [
 
 // Services / Skills (icons reuse existing assets where available)
 const services = [
-  { title: "CSS", icon: css, level: 92 },
-  { title: "JavaScript", icon: javascript, level: 90 },
-  { title: "Bootstrap", icon: bootstrap, level: 80 },
-  { title: "Tailwind", icon: tailwind, level: 78 },
+  { title: "CSS", icon: css, level: 60 },
+  { title: "JavaScript", icon: javascript, level: 35 },
+  { title: "Bootstrap", icon: bootstrap, level: 75 },
+  { title: "Tailwind", icon: tailwind, level: 37 },
   { title: "PHP", icon: php, level: 84 },
-  { title: "Laravel", icon: laravel, level: 86 },
-  { title: "CodeIgniter", icon: codeigniter, level: 70 },
-  { title: "Python", icon: python, level: 72 },
-  { title: "MySQL", icon: mysql, level: 80 },
-  { title: "PostgreSQL", icon: postgresql, level: 76 },
+  { title: "Laravel", icon: laravel, level: 83 },
+  { title: "CodeIgniter", icon: codeigniter, level: 86 },
+  { title: "Python", icon: python, level: 55 },
+  { title: "MySQL", icon: mysql, level: 75 },
+  { title: "PostgreSQL", icon: postgresql, level: 65 },
   { title: "Git", icon: git, level: 88 },
-  { title: "WordPress", icon: wordpress, level: 82 },
+  { title: "WordPress", icon: wordpress, level: 34 },
 ];
 
 const technologies = [
@@ -181,7 +181,7 @@ const experiences = [
   },
       {
     title: "???",
-    company_name: "i litraly have no cluee what im doing with ny life",
+    company_name: "i litraly have no cluee what im doing with my life",
     icon: tandatanya,
     iconBg: "#E6DEDD",
     date: "Jan 2026 - Future",
@@ -199,7 +199,7 @@ const testimonials = [
     name: "Chris Gardner",
     designation: "The Pursuit of Happyness",
     company: "",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/64100/pursuithappyness20.jpg",
   },
   {
     testimonial:
@@ -207,7 +207,7 @@ const testimonials = [
     name: "Alfredo Narciso",
     designation: "The Summer I Turned Pretty",
     company: "",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "https://people.com/thmb/Gj7vm9AZ3PTPrOFSBK9WiiCVWMI=/4000x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/alfredo-narciso-summer-i-turned-pretty-d26b8faa194d4e238650371e6db7cadf.jpg",
   },
   {
     testimonial:
@@ -215,7 +215,7 @@ const testimonials = [
     name: "Juan",
     designation: "Moonlight",
     company: "",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "https://ca-times.brightspotcdn.com/dims4/default/88ac764/2147483647/strip/true/crop/1600x900+0+0/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F05%2Fc3%2F976b6d92301c5c2ac4dc5cc03d2d%2Fla-1488160663-yiqv982qgu-snap-photo",
   },
 ];
 
@@ -265,7 +265,7 @@ const projects = [
   {
     name: "ZyrexBot",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "ZyrexBot is a WhatsApp bot that I developed myself, designed to help users automate chats in real time: category-based command handling, automatic response selection based on message context, structured user activity logging, and filtered interaction views tailored to user needs. The system provides daily and historical summaries through time-based message processing, real-time status updates after each executed command, and a clear separation between informational, utility, and data-management functions — ensuring accurate interactions, an efficient user experience, and greater control over communication management on WhatsApp.",
     tags: [
       {
         name: "nodejs",
